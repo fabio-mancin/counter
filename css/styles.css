@@ -3,6 +3,7 @@
     --red: #af0069;
     --green: #55b3b1;
     --orange: #f6c065;
+    --border-button: 0.2em solid #09015f;
     --input-border: #8b8a8b;
     --input-focus-h: 245;
     --input-focus-s: 100%;
@@ -41,12 +42,12 @@ body {
     width: 20%;
     height: 100%;
     background-color: var(--green);
-    border-right: 0.2em solid var(--blue);
-    border-left: 0.2em solid var(--blue);
+    border-right: var(--border-button);
+    border-left: var(--border-button);
     position: relative;
 }
 
-.button:hover {
+.button:hover, .reset:hover {
     cursor: pointer;
 }
 
@@ -58,10 +59,29 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+.reset {
+    position: absolute;
+    background-color: red;
+    padding: 0.5em;
+    bottom: 0;
+    right: 0;
+    border-top: var(--border-button);
+    border-left: var(--border-button);
+}
+
+h1 {
+    position: absolute;
+    padding: 0.5em;
+    bottom: 0;
+    left: 0;
+    color: var(--blue);
 }
 
 input {
-    width: 40%;
+    width: 3ch;
     height: 20%;
     font-size: 40px;
     font-family: inherit;
@@ -95,12 +115,20 @@ label {
         height: 20%;
         border-right: 0;
         border-left: 0;
-        border-top: 0.2em solid var(--blue);
-        border-bottom: 0.2em solid var(--blue);
+        border-top: var(--border-button);
+        border-bottom: var(--border-button);
     }
 
     .counter-container {
         width: 100%;
         height: 60%;
+    }
+
+    .reset {
+        width: 33%;
+        padding: 0.3em;
+    }
+    .reset img{
+        width: 100%;
     }
 }

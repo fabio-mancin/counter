@@ -8,6 +8,7 @@
     <title>Counter</title>
     <meta name="description" content="Counter">
     <meta name="author" content="Fabio">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
 
     <link rel="stylesheet" href="css/styles.css?v=1.0">
 
@@ -18,14 +19,20 @@
         <div class="button plus">
             <img class="plus" src="static/plus.svg"></img>
         </div>
+
         <div class="counter-container">
             <label class="label" for="text-input">Add/Subtract by:</label>
             <input class="input" id="text-input" type="text" value="1"/>
             <span class="counter">0</span>
+            <div class="reset">
+                <img src="static/delete.svg"></img>
+            </div>
+            <h1>Counter</h1>
         </div>
+
         <div class="button">
             <img src="static/minus.svg"></img>
-        </div>
+        </div>      
     </div>
     <script src="js/scripts.js"></script>
 </body>
