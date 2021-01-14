@@ -133,18 +133,33 @@ label {
     font-weight: bold;
     content: attr(data-text);
     position: absolute;
-    top: 0.5;
-    bottom: 100%;
-    margin-bottom: 0.4em;
-    width: 200px;
-    padding: 10px;
+    width: auto;
+    padding: 6px;
     border-radius: 10px;
-    background: var(--orange);
     color: var(--blue);
     border: 2px solid var(--blue);
     text-align: center;
     z-index: 2;
     display: none;
+    background-color: lightslategray;
+    opacity: 0.9;
+}
+
+.plus.tooltip:before {
+    bottom: 101%;
+}
+
+.minus.tooltip:before {
+    top: 101%;
+}
+
+.reset.tooltip:before {
+    bottom:110%;
+    right: 5%;
+}
+
+h1:before {
+    bottom:120%;
 }
 
 .tooltip:hover:before {
