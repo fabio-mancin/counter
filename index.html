@@ -16,7 +16,8 @@
 
 <body>
     <div class="container">
-        <div class="button plus">
+        <div class="button plus tooltip"
+            data-text="Press me to increase the counter by the desidered amount!" >
             <img class="plus" src="static/plus.svg"></img>
         </div>
 
@@ -26,17 +27,21 @@
 
             <span class="total">0</span>
 
-            <div class="reset">
+            <div class="reset tooltip"
+                data-text="Reset counter." >
                 <img src="static/delete.svg"></img>
             </div>
 
             <a class="title" href="https://github.com/fabio-mancin/counter" target="_blank">
                 <img src="static/github.svg"></img>
-                <h1>Counter</h1>
+                <h1 class="tooltip"
+                    data-text="View on GitHub." >
+                Counter</h1>
             </a>
         </div>
 
-        <div class="button">
+        <div class="button tooltip"
+            data-text="Press me to decrease the counter by the desidered amount!" >
             <img src="static/minus.svg"></img>
         </div>
     </div>

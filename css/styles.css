@@ -44,7 +44,8 @@ body {
     position: relative;
 }
 
-.button:hover, .reset:hover {
+.button:hover,
+.reset:hover {
     cursor: pointer;
 }
 
@@ -60,14 +61,15 @@ body {
 }
 
 .reset {
-   position: absolute;
-   bottom: 0;
-   right: 0;
-   background-color: var(--red);
-   border-left: var(--border-button);
-   border-top: var(--border-button);
-   padding: 0.2em;
-   width: 15%;
+    position: absolute !important;
+    bottom: 0;
+    right: 0;
+    background-color: var(--red);
+    border-left: var(--border-button);
+    border-top: var(--border-button);
+    padding: 0.2em;
+    width: 15%;
+    min-width: 42.56px;
 }
 
 .reset img {
@@ -76,7 +78,7 @@ body {
 
 .title {
     position: absolute;
-    padding: 0.5em;
+    padding: 0.2em;
     bottom: 0;
     left: 0;
     color: var(--blue);
@@ -121,6 +123,32 @@ label {
     border: var(--border-button);
     font-weight: bold;
     padding: 0.2em;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip:before {
+    font-weight: bold;
+    content: attr(data-text);
+    position: absolute;
+    top: 0.5;
+    bottom: 100%;
+    margin-bottom: 0.4em;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--orange);
+    color: var(--blue);
+    border: 2px solid var(--blue);
+    text-align: center;
+    z-index: 2;
+    display: none;
+}
+
+.tooltip:hover:before {
+    display: block;
 }
 
 @media only screen and (max-width: 600px) {
