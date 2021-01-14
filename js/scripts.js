@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     //selectors of elements for clarity
     const buttonsNodeList = document.querySelectorAll(".button");
-    const counterSelector = document.querySelector(".counter");
+    const counterSelector = document.querySelector(".total");
     const inputSelector = document.querySelector(".input");
     const resetSelector = document.querySelector(".reset");
     const labelSelector = document.querySelector(".label");
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
             //..show a warning..
             showMessage("Only numbers or '.' allowed.");
             //..and delete the invalid value
-            inputSelector.value = inputSelector.value.slice(0, -1);
+            inputSelector.value = inputSelector.value.replace(/\D|/g,"");
         }
         //keep the width of the input field always nice
         inputSelector.style.width = inputSelector.value.length + 2 + "ch";

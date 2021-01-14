@@ -5,9 +5,6 @@
     --orange: #f6c065;
     --border-button: 0.2em solid #09015f;
     --input-border: #8b8a8b;
-    --input-focus-h: 245;
-    --input-focus-s: 100%;
-    --input-focus-l: 42%;
 }
 
 * {
@@ -63,21 +60,34 @@ body {
 }
 
 .reset {
-    position: absolute;
-    background-color: red;
-    padding: 0.5em;
-    bottom: 0;
-    right: 0;
-    border-top: var(--border-button);
-    border-left: var(--border-button);
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   background-color: var(--red);
+   border-left: var(--border-button);
+   border-top: var(--border-button);
+   padding: 0.2em;
+   width: 15%;
 }
 
-h1 {
+.reset img {
+    width: 100%;
+}
+
+.title {
     position: absolute;
     padding: 0.5em;
     bottom: 0;
     left: 0;
     color: var(--blue);
+    text-decoration: none;
+    border-top: var(--border-button);
+    border-right: var(--border-button);
+    background-color: var(--red);
+}
+
+.title * {
+    display: inline;
 }
 
 input {
@@ -97,10 +107,11 @@ label {
     text-align: center;
 }
 
-.counter {
+.total {
     color: var(--blue);
     stroke-width: 3px;
     font-size: 120px;
+    z-index: 1;
 }
 
 @media only screen and (max-width: 600px) {
@@ -122,13 +133,5 @@ label {
     .counter-container {
         width: 100%;
         height: 60%;
-    }
-
-    .reset {
-        width: 33%;
-        padding: 0.3em;
-    }
-    .reset img{
-        width: 100%;
     }
 }
