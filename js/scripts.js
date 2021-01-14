@@ -9,9 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
     //show a message instead of the default text..
     const showMessage = (message) => {
         labelSelector.innerHTML = message;
+        labelSelector.classList.add("message");
         //..and go back to default after 3 seconds
         setTimeout(() => {
             labelSelector.innerHTML = "Add/Subtract by:";
+            labelSelector.classList.remove("message");
         }, 3000);
     };
 
@@ -48,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
         //if the value is invalid..
         if (isNaN(currentInputValue)) {
             //..show a warning..
-            showMessage("Only numbers or '.' allowed.");
+            showMessage("Only digits or '.' allowed.");
             //..and delete the invalid value
             inputSelector.value = inputSelector.value.replace(/\D|/g,"");
         }

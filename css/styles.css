@@ -91,6 +91,7 @@ body {
 }
 
 input {
+    margin-top: 0.2em;
     width: 3ch;
     height: 20%;
     font-size: 40px;
@@ -112,6 +113,14 @@ label {
     stroke-width: 3px;
     font-size: 120px;
     z-index: 1;
+}
+
+.message {
+    color: red;
+    background-color: var(--green);
+    border: var(--border-button);
+    font-weight: bold;
+    padding: 0.2em;
 }
 
 @media only screen and (max-width: 600px) {
